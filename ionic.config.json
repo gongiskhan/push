@@ -1,6 +1,8 @@
 {
   "name": "Push",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
   "id": "1eb679c9"
 }
