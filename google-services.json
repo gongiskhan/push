@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "709432658335",
+    "firebase_url": "https://pushgg-9f74a.firebaseio.com",
+    "project_id": "pushgg-9f74a",
+    "storage_bucket": "pushgg-9f74a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709432658335:android:989ed11ec0fdda45",
+        "android_client_info": {
+          "package_name": "com.gg.push"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709432658335-2d6pgkv62dhen9fse1am3nl0qdcm05km.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfl8ey5wvq1Dp7P6FdTvYPOyE6YLQH-QE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709432658335-2d6pgkv62dhen9fse1am3nl0qdcm05km.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "709432658335-eil86n215bqm1fp42eq27gauua56ce4p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gg.push"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

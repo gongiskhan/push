@@ -11,7 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AngularFireModule } from 'angularfire2';
-import { Firebase } from '@ionic-native/firebase/ngx';
+import { Firebase } from '@ionic-native/firebase';
+import {FcmService} from "./fcm.service";
 
 const firebaseConfig = {
   production: false,
@@ -48,6 +49,7 @@ const firebaseConfig = {
     StatusBar,
     SplashScreen,
     Firebase,
+    FcmService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
