@@ -1,18 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {ErrorHandler, NgModule} from '@angular/core';
+import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
+import {MyApp} from './app.component';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
+import {ItemDetailsPage} from '../pages/item-details/item-details';
+import {ListPage} from '../pages/list/list';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import {StatusBar} from '@ionic-native/status-bar';
+import {SplashScreen} from '@ionic-native/splash-screen';
 
-import { AngularFireModule } from 'angularfire2';
-import { Firebase } from '@ionic-native/firebase';
+import {AngularFireModule} from 'angularfire2';
+import {Firebase} from '@ionic-native/firebase';
 import {FcmService} from "./fcm.service";
+import {InAppPurchasePage} from "../pages/in-app-purchase/in-app-purchase";
+import {InAppPurchaseService} from "./iap.service";
+import {InAppPurchase} from "@ionic-native/in-app-purchase";
+// import {AngularFireMessaging} from '@angular/fire/messaging';
 
 const firebaseConfig = {
   production: false,
@@ -29,7 +32,7 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
+    InAppPurchasePage,
     ItemDetailsPage,
     ListPage
   ],
@@ -41,7 +44,7 @@ const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
+    InAppPurchasePage,
     ItemDetailsPage,
     ListPage
   ],
@@ -49,8 +52,11 @@ const firebaseConfig = {
     StatusBar,
     SplashScreen,
     Firebase,
+    // AngularFireMessaging,
     FcmService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    InAppPurchase,
+    InAppPurchaseService
   ]
 })
 export class AppModule {}

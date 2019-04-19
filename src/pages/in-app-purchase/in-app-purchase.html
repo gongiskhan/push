@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>In App Purchase</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding text-center>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label>Product Title</ion-label>
+        <span>{{inAppPurchaseService.goldProduct && inAppPurchaseService.goldProduct.title}}</span>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label>Product Description</ion-label>
+        <span>{{inAppPurchaseService.goldProduct && inAppPurchaseService.goldProduct.description}}</span>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label>Product Price</ion-label>
+        <span>{{inAppPurchaseService.goldProduct && inAppPurchaseService.goldProduct.price}}</span>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <button ion-button full primary (click)="inAppPurchaseService.buyGold()">Buy {{inAppPurchaseService.goldProduct && inAppPurchaseService.goldProduct.title}}</button>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <span>Can I get me some chipz now?</span>
+    </ion-col>
+    <ion-col>
+      <span>{{inAppPurchaseService.isGoldBought ? 'YES YOU CAN!' : 'NAH, PAY ME FIRST YO'}}</span>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
