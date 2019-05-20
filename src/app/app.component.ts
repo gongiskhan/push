@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import {FcmService} from "./fcm.service";
 import {ToastController} from "ionic-angular";
 import {InAppPurchasePage} from "../pages/in-app-purchase/in-app-purchase";
@@ -32,8 +32,8 @@ export class MyApp {
     ];
   }
 
-  private async presentToast(message) {
-    const toast = await this.toastController.create({
+  private presentToast(message) {
+    const toast = this.toastController.create({
       message,
       duration: 3000
     });

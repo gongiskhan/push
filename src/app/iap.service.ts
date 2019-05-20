@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Platform } from 'ionic-angular';
-import {InAppPurchase} from "@ionic-native/in-app-purchase";
+import {InAppPurchase} from "@ionic-native/in-app-purchase/ngx";
 
 @Injectable()
 export class InAppPurchaseService {

@@ -6,16 +6,16 @@ import {MyApp} from './app.component';
 import {ItemDetailsPage} from '../pages/item-details/item-details';
 import {ListPage} from '../pages/list/list';
 
-import {StatusBar} from '@ionic-native/status-bar';
-import {SplashScreen} from '@ionic-native/splash-screen';
+import {StatusBar} from '@ionic-native/status-bar/ngx';
+import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 
 import {AngularFireModule} from 'angularfire2';
-import {Firebase} from '@ionic-native/firebase';
+import {Firebase} from '@ionic-native/firebase/ngx';
 import {FcmService} from "./fcm.service";
 import {InAppPurchasePage} from "../pages/in-app-purchase/in-app-purchase";
 import {InAppPurchaseService} from "./iap.service";
-import {InAppPurchase} from "@ionic-native/in-app-purchase";
-// import {AngularFireMessaging} from '@angular/fire/messaging';
+import {InAppPurchase} from "@ionic-native/in-app-purchase/ngx";
+import {AngularFireMessaging} from '@angular/fire/messaging';
 
 const firebaseConfig = {
   production: false,
@@ -52,7 +52,7 @@ const firebaseConfig = {
     StatusBar,
     SplashScreen,
     Firebase,
-    // AngularFireMessaging,
+    AngularFireMessaging,
     FcmService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     InAppPurchase,
