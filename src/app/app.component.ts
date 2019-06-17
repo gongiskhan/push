@@ -44,6 +44,7 @@ export class MyApp {
     this.fcm.getToken();
     this.fcm.onNotifications().subscribe(
       (msg) => {
+        console.debug('msg', msg);
         if (this.platform.is('ios')) {
           this.presentToast(msg.aps.alert);
         } else {
